@@ -67,7 +67,7 @@ class Pusher implements LoggerAwareInterface, PusherInterface
         if (!is_null($client)) {
             $this->client = $client;
         } else {
-            $this->client = new \GuzzleHttp\Client();
+            $this->client = new \GuzzleHttp\Client(['verify' => false]);
         }
 
         $useTLS = true;
